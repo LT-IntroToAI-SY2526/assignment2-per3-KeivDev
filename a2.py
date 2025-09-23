@@ -43,7 +43,15 @@ def match(pattern: List[str], source: List[str]) -> List[str]:
                 print(result)
                 return result
             else:
-                pass # more things here - not at end
+                pind += 1
+                accum = ""
+                while pattern[pind] != source[sind]:
+                    accum += source[sind] + " "
+                    sind += 1
+
+                    if sind == len(source):
+                        return None
+                result.append(accum.strip())
         # 3) if we reached the end of the source but not the pattern
         elif sind == len(source):
             print("end of source")
