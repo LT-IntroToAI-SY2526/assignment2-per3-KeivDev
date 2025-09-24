@@ -41,7 +41,7 @@ def match(pattern: List[str], source: List[str]) -> List[str]:
                 combined = " ".join(source[sind:])
                 result .append(combined)
                 print(result)
-                return result
+                return result  
             else:
                 pind += 1
                 accum = ""
